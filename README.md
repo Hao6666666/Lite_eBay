@@ -1,4 +1,4 @@
-# Webapp
+# Lite eBay Webapp
 
 &nbsp;
 
@@ -28,7 +28,7 @@
 
 &nbsp;
 
-# aws-infra
+# aws-infra (Infra-as-code)
 
 &nbsp;
 
