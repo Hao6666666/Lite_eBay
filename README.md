@@ -8,6 +8,27 @@
 * Streamlined cluster management with Kubernetes, Skaffold, and Docker.
 
 &nbsp;
+### Architecture Diagram
+
+ ![aws_full](https://user-images.githubusercontent.com/42703011/92800898-211c7580-f383-11ea-9b4e-76c171fca750.png)
+
+
+Tools and Technologies
+----------------------
+                          
+| Infrastructure       | VPC, ELB, EC2, Route53, Cloud formation, Shell, Packer |
+|----------------------|--------------------------------------------------------|
+| Webapp               | Java, Spring Boot, MySQL, Maven                        |
+| CI/CD                | Github Actions, AWS Code Deploy                        |
+| Alerting and logging | statsd, Cloud Watch, SNS, SES, Lambda                  |
+| Security             | SSL                                                    |
+
+Infrastructure-setup
+--------------------
+
+-   Create the networking setup using cloud formation and aws cli
+-   Create the required IAM policies and users
+-   Setup Load Balancers, Route53, RDS, S3, SNS, SES, SSL 
 
 #### Prerequisites
 
@@ -38,6 +59,19 @@
 # aws-infra (Infra-as-code)
 
 &nbsp;
+[Packer](https://packer.io/)
+----------------------------
+
+-   Implemented CI to build out an AMI and share it between organization
+    on AWS
+-   Created provisioners and bootstrapped the EC2 instance with required
+    tools like Tomcat, JAVA, Python
+
+[Terraform](https://terraform.io/)
+----------------------------
+
+-   Configured AWS cloud resources such as EC2, VPC, S3, RDS, Route53, 
+    ELB, Auto-scalling group, etc.
 
 #### Pre requisites
 
@@ -72,3 +106,16 @@
 > aws acm import-certificate --profile demo --certificate fileb://demo_tuffy666_me.crt --private-key fileb://private.key --certificate-chain fileb://demo_tuffy666_me.ca-bundle
 
 &nbsp;
+
+# CI/CD
+* Using github actions configured CI/CD pipeline, the pipeline YAML file can be found in `.github/workflos`
+
+# Running Tests
+* Used mockito and junit for test case.
+* Run WebappApplication test cases: open the webapp aplication on your IDE -> right click on webapp -> Run 'All Tests'
+
+# Auto scaling groups
+* Created auto scaling groups to scale to the application to handle the webtraffic and keep the costs low when traffic is low
+* Created cloud watch alarms to scale up and scale down the EC2 instances
+
+
