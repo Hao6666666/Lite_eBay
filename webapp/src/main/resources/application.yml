@@ -1,0 +1,66 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${DB_HOST}/${DB_NAME:csye6225}?createDatabaseIfNotExist=true
+    username: ${DB_USERNAME:csye6225}
+    password: ${DB_PASSWORD:rootpassword}
+#    url: jdbc:mysql://${DB_HOST:localhost}/${DB_NAME:UserDB}?createDatabaseIfNotExist=true
+#    username: ${DB_USERNAME:root}
+#    password: ${DB_PASSWORD:Yh31415926}
+    hikari:
+      initialization-fail-timeout: 10000
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+
+metrics:
+  statsd:
+    enabled: true
+    host: localhost
+    port: 8125
+
+server:
+  port: 8080
+
+#spring:
+#
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/UserDB?createDatabaseIfNotExist=true
+#    username: root
+#    password: Yh31415926
+#    hikari:
+#          initialization-fail-timeout: 10000
+#  jpa:
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: create-drop
+#  data:
+#    redis:
+#      host: localhost
+#      port: 6379
+#      database: 0
+#server:
+#  port: 8080
+
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://mysqldb:3306/csye6225db?createDatabaseIfNotExist=true
+#    username: root
+#    password: root
+#    hikari:
+#      initialization-fail-timeout: 10000
+#  jpa:
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: create-drop
+#server:
+#  port: 8080
+
