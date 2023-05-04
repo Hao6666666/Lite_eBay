@@ -6,7 +6,7 @@
 
 #### 1. Git clone this repository to your computer
 
-> git clone git@github.com:CSYE6225-HAO/webapp.git
+> git@github.com:Hao6666666/Lite_eBay.git
 
 #### 2. Install MySQL database to your computer
 
