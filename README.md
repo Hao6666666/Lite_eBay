@@ -1,5 +1,12 @@
 # Lite eBay Webapp
 
+* Developed RESTful APIs (authentication, order, ticketing, payment) using Java, SpringBoot, and JPA.
+* Automated the creation of Amazon Machine Images (AMIs) with Packer, reduced image build time by 50%.
+* Implemented Infrastructure-as-Code on AWS with Terraform, deployed and managed EC2, VPC, RDS, and S3 resources.
+* Configured a CI/CD pipeline on GitHub Actions with YAML, and conducted JUnit tests with MockMVC.
+* Improved system scalability by over 70% through configuring AWS CloudWatch, Load Balancer, and Auto Scaling group.
+* Streamlined cluster management with Kubernetes, Skaffold, and Docker.
+
 &nbsp;
 
 #### Prerequisites
